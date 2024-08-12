@@ -1,0 +1,66 @@
+Sistema de evaluación de instructores:
+
+Enlace:
+https://einstructor.datasena.com/login
+
+Usuario Administrador:
+Le comparto mi usuario:
+Usuario: 1077860444
+clave: 1077860444
+
+_______ BD_________
+-BD:--
+USERNAME=postgres
+PASSWORD=PGSQL@RT1CUL4C10N1929
+
+____ Archivos____________________
+Pasos para cargar Fichas faltantes.pdf
+Pasos Creación Evaluación Instructores.pdf
+
+_______Clave máquina_______________
+Pr0y3ct0sS3n4
+
+_________________AnyDESK____________
+171469027
+Colombia2023.
+Pr0y3ct0sS3n4
+
+_______Documentos evaluación 2023_____________
+https://drive.google.com/drive/folders/1nFg8zKtK60phLbNRVdgTcfpfqWLCGvCs?usp=sharing
+
+
+******************************************************
+_______NUEVA MAQUINA PARA CESION EN PYTHON___________
+Numero de acceso Anydesk:   1772528057
+Usuario Anydesk:  P@ssw0rd
+Usuario Ubuntu:  Colombia2024.
+
+172.16.170.60:8080
+
+******************************************************
+# en mi maquina
+# para app de instructores
+
+
+sudo docker
+sudo docker ps -a
+sudo docker stop 1f9....
+sudo docker rm 1f9....
+
+sudo docker run --name instructores -e POSTGRES_USER=gabriel -e POSTGRES_PASSWORD=P05t6r35 -e POSTGRES_DB=instructores -p 5432:5432 -d postgres
+
+restart container after turn off compo
+sudo kill -9 `sudo lsof -t -i:5432`
+sudo docker container start <container num>
+
+# flask postgres
+# install postgres
+# https://www.youtube.com/watch?v=40uGNsi7ysc
+# https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04
+
+# flask postgres sqlalchemy I
+# https://www.youtube.com/watch?v=wqBFgaMgFQA&t=1470s
+# flask postgres sqlalchemy II
+# https://www.youtube.com/watch?v=TDwy1lSjEZo
+
+

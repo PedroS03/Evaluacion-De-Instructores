@@ -1,0 +1,54 @@
+{% extends 'evalinst/layout.html' %}
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+    
+<div class="container mb-5">
+        <div class="col-10 mx-auto m-5 p-5 ">
+            <div class="row ">
+                <div class="col-lg-6 col-sm-11 mx-auto ">
+                    <div class="col-11 mx-auto mb-5 c">
+                        <h3>Información del Aprendiz</h3>
+                    </div>
+
+                    <div class="col-9 mx-auto mb-3">
+                        <h5>Ficha:  {{ aprendix }}</h5>
+                        <h5>Ficha:  {{ aprendix.FICHA }}</h5>
+                        <h5>Doc Identidad:  {{ aprendix.NUMERO_DE_DOCUMENTO }}</h5>
+                        <h5>Nombre:  {{ aprendix.NOMBRE }}</h5>
+                        <h5>Apellidos:  {{ aprendix.APELLIDOS }}</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-sm-11 mx-auto backs">
+                    <div class="col-11 mx-auto mb-5 c">
+                        <h3>Instructores por Evaluar</h3>
+                    </div>
+                    <form action="testing" method="POST"> 
+                        {% csrf_token %}
+                        {% for instructor in instructores %}
+                        
+                            <div class="col-lg-11 col-sm-10 mx-auto">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="radio" name="instructor" id="instructor" value="{{ instructor.id }}">
+                                    <h6><label class="form-check-label" for="instructor">{{ instructor.id }} {{ instructor.NOMBRE }} {{ instructor.APELLIDOS }}</label></h6>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+
+                        <div class="d-grid gap-2 col-8 mx-auto mt-5 mb-5">
+                            <button class="btn btn-color2" type="submit">Evaluar</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'evalinst/layout.html' %}
+{% load static %}
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+<body>
+    <h1>Evaluación de Instructores SENA</h1>
+    <div class="container">
+        <div class="questions">
+        <h2>Cuestionario de evaluación de instructores</h2>
+        <p>Tenga en cuenta que 0 es muy ineficiente y 5 muy eficiente</p>
+        <ul id="preguntas-list">
+            <!-- Aquí se mostrarán las preguntas existentes -->
+        </ul>
+        <button type="submit">Enviar evaluación</button>
+    </div>
+    <script src="preguntas.js"></script>
+</body>
+{% endblock content %}

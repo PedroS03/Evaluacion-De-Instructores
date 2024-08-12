@@ -1,0 +1,26 @@
+{% extends 'evalinst/layout.html' %}
+{% block title %} {{title}} {% endblock %}
+{% load static %}
+{% block content %}
+
+<div class="col-md-6 mx-auto mt-5">
+    <div class="col-6 mx-auto pt-4 p-5 backs">
+        <div class="logohash">
+            <img src="/static/img/icons/LogoSENAblanco.png">
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+                <input type="text" name="username" class="loginInput" placeholder="Nombre de usuario">
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" class="loginInput" placeholder="Contraseña">
+            </div>
+                <div class="col-6 mt-5 d-grid gap-2 mx-auto">
+                    <button class="btn btn-color2" type="submit" >Aceptar</button>
+                </div>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

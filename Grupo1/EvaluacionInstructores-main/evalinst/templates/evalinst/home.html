@@ -1,0 +1,49 @@
+{% extends 'evalinst/layout.html' %}
+{% load static %}
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+<body><div class="contenedor">    
+    <div class="columna1">
+        <h1 style="text-align: left;">Valoración de instructores por<br>parte de los aprendices</h1>
+        <p style="text-align: left;">La aplicación tiene como finalidad permitirle a los aprendices dar una valoración respecto a 
+        <br>como creen que fue el desempeño de los instructores que estuvieron acompañandolos por un 
+        <br>trimestre academico.</p>
+    </div>
+    <div class="columna2"> 
+        <img src="/static/docs/page design/Imagenes pagina evaluacion instructores/Imagen HOME Banner.png" alt=""></div>
+    </div>
+    <div class="ingreseAqui">
+        <p>¡INGRESA AQUÍ!</p>
+    </div>
+    <div class="flecha">
+        <img class="flechaa" src="/static/img/img/flecha.png" alt="">
+    </div>
+    <div class="col-12 mx-auto mt-5 mb-5">
+    <div class="col-7 mx-auto mt-3 mb-5">
+        <h3 style="text-align: center;">Portal de Acceso</h3>
+            <div class="col-8 mx-auto p-5 backs">
+                <form action="/validarHash/" method="POST">
+                    {% csrf_token %}
+                    <div class="col-lg-12 col-sm-10 mx-auto">
+                        <div class="mb-3">
+                            <div class="logohash">
+                                <img src="/static/img/icons/LogoSENAblanco.png">
+                            </div>
+                            <p style="text-align: center; font-size: 25px;font-weight:500; color: black;" >HASH</p>
+                            <p style="text-align: center; color: black;">Ingrese el hash que fue enviado a su correo institucional o personal</p>
+                            <input type="password" class="form-control" id="hashFormControl" name="hash" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-sm-10 mx-auto d-grid gap-2 mt-5">
+                        <input class="btn btn-color2" type="submit" value="Aceptar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+{% endblock %}

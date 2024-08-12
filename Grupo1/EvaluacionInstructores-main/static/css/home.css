@@ -1,0 +1,66 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    
+*{
+    font-size: 17px;
+    font-family: "Kanit", sans-serif;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+.columna1{
+    padding: 25px;
+    align-content: center;
+}
+
+.columna1 h1{
+    color: rgb(50, 161, 50);
+    font-size: 65px;
+}
+
+.columna1 h4{
+    font-size: 40px;
+}
+
+.columna1 p{
+    font-size: 30px;
+}
+
+.columna2{
+    padding: 25px;
+    margin-right: -50px;
+}
+
+.flecha{
+    display: flex;
+    justify-content: center;
+}
+
+
+.flechaa{
+    height: 100px;
+}
+
+.ingreseAqui{
+    display: flex;
+    justify-content: center;
+}
+
+.ingreseAqui p{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.logohash{
+    display: flex;
+    justify-content: center;
+}
+
+.logohash img{
+    height: 100px;
+}
+

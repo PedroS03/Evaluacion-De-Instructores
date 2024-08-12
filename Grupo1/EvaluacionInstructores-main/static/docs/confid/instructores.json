@@ -1,0 +1,14 @@
+{
+	"SECRET_KEY": "nn9r-c1pctctt$*zprf441rko@c4l=#7+*wh3d(_*+smwyz35+",
+	
+	"MACH_DB_PORT": "5432",
+	"MACH_DB_NAME": "-BD:--",
+	"MACH_DB_USER": "postgres",
+	"MACH_DB_PASSWORD": "PGSQL@RT1CUL4C10N1929",
+
+	"DB_PORT": "5432",
+	"DB_NAME": "califica",
+	"DB_USER": "postgres",
+	"DB_PASSWORD": ""
+}
+

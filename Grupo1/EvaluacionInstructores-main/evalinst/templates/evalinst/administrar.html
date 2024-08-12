@@ -1,0 +1,40 @@
+{% extends 'evalinst/layout.html' %}
+{% load static %}
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+    <h1>Administrar Preguntas</h1>
+    <div class="container">
+        <h2>Crear Pregunta</h2>
+        <form id="crear-pregunta-form">
+            <label for="pregunta">Pregunta:</label>
+            <input type="text" id="pregunta" name="pregunta">
+            <button type="submit">Crear Pregunta</button>
+        </form>
+
+        <h2>Preguntas Existentes</h2>
+        <ul id="preguntas-list">
+            <!-- Aquí se mostrarán las preguntas existentes -->
+        </ul>
+
+        <h2>Actualizar Pregunta</h2>
+        <form id="actualizar-pregunta-form">
+            <label for="pregunta-id">ID de la pregunta:</label>
+            <input type="number" id="pregunta-id" name="pregunta-id">
+            <label for="nueva-pregunta">Nueva pregunta:</label>
+            <input type="text" id="nueva-pregunta" name="nueva-pregunta">
+            <button type="submit">Actualizar Pregunta</button>
+        </form>
+
+        <h2>Eliminar Pregunta</h2>
+        <form id="eliminar-pregunta-form">
+            <label for="pregunta-id-eliminar">ID de la pregunta:</label>
+            <input type="number" id="pregunta-id-eliminar" name="pregunta-id-eliminar">
+            <button type="submit">Eliminar Pregunta</button>
+        </form>
+    </div>
+
+    <script src="administrar.js"></script>
+
+{% endblock content %}

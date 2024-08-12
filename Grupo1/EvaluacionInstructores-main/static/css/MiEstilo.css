@@ -1,0 +1,116 @@
+html {
+    --scrollbarBG: #f1f5f7;
+    --thumbBG: #39A900;
+  }
+  body::-webkit-scrollbar {
+    width: 21px;
+  }
+  body {
+    scrollbar-width: auto;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 8px;
+    border: 3px solid var(--scrollbarBG);
+  }
+   .sena-fondo:hover{
+    background-color:#f0ec84;
+}
+.sena-fondo{
+    background-color:white;
+}
+.sena-color{
+    background-color:#39A900;
+    border-color: darkgray;
+}   
+.sena-sombra{
+    text-shadow: 2px 2px 5px #000000;
+}
+.sena-hover:hover{
+    background-color:#eaf39c;
+}
+  .sena-btn:hover{
+    background-color:#eaf39c;
+    background-color:yellow;
+  }.sena-btn {
+    cursor:pointer;    
+    background: url("https://siomi.datasena.com/bt1.jpg") no-repeat right center;  
+     text-align: left;
+  width: 90%;
+  text-align:  left;
+  height: 40px;
+  font-size: 10pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px #ABEBC6;
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 25px 0px #ABEBC6;
+  #padding: 10px 10px 10px 10px;
+  # padding: 10px 0;
+  
+   margin:10,10,10,10;
+   border:10,10,10,10;
+   width:100%;
+   
+   border-radius: 15px 10px 10px 15px;
+  -moz-border-radius: 15px 10px 10px 15px;
+  -webkit-border-radius: 15px 10px 10px 15px;
+  border: 1px solid #000000;
+  background-color: white;
+  color:black;
+  vertical-align: middle;;
+  }
+  .sena-btn,.sena-btns:hover{
+    background-color:#eaf39c;
+  }
+    .sena-btns:hover{
+        background-color:#eaf39c;
+        background-color:yellow;
+  }.sena-btns {
+    cursor:pointer;    
+     text-align: left;
+     text-align: center;
+  width: 90%;
+  height: 40px;
+  font-size: 10pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px #ABEBC6;
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 25px 0px #ABEBC6;
+  #padding: 10px 10px 10px 10px;
+  # padding: 10px 0;
+  
+   margin:10,10,10,10;
+   border:10,10,10,10;
+   width:100%;
+   
+   border-radius: 15px 10px 10px 15px;
+  -moz-border-radius: 15px 10px 10px 15px;
+  -webkit-border-radius: 15px 10px 10px 15px;
+  border: 1px solid #000000;
+  background-color: black;
+  color:white;
+  vertical-align: middle;;
+  }
+  .sena-btn:hover{
+    background-color:#eaf39c;
+    background-color:yellow;
+  }
+  .sena-btns:hover{
+    background-color:yellow;
+    color:black;
+  }
+  sena-round{
+    border-radius:4px
+  }
+
+

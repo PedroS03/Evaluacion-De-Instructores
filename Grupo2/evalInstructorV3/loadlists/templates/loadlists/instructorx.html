@@ -1,0 +1,41 @@
+{% extends 'evalinstructor/layout.html' %}
+{% load static %}
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+{% if doxx %}
+<div class="col-12 mx-auto mt-5 mb-5">
+    <div class="col-7 mx-auto mt-3 mb-5">
+        <div class="mx-auto c">
+            <img class="logohash" src="/media/{{doxx}}">
+        </div>
+    </div>
+</div>
+{% else %}
+
+<div class="col-12 mx-auto mt-5 mb-5">
+    <div class="col-7 mx-auto mt-3 mb-5">
+        <h3 class="c">Portal de Acceso</h3>
+        <div class="col-8 mx-auto p-5 backs">
+            <form action="instructorx" method="POST">
+                {% csrf_token %}
+                <div class="col-lg-12 col-sm-10 mx-auto">
+                    <div class="mb-3">
+                        <div class="mx-auto c">
+                            <img class="logohash" src="{% static 'img/icons/LogoSENAblanco.png' %}">
+                        </div>
+                        <h3 class="txtcol1 c">CCCC</h3>
+                        <p class="txtcol1 c">Ingrese el hash que fue enviado a su correo institucional o personal</p>
+                        <input type="password" class="form-control" id="hashFormControl" name="documento" required>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-sm-10 mx-auto d-grid gap-2 mt-5">
+                    <input class="btn btn-color2" type="submit" value="Aceptar">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

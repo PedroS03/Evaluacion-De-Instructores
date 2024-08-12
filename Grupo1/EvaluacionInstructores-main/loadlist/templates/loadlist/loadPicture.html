@@ -1,0 +1,39 @@
+{% extends 'evalinst/layout.html' %}
+{% load static %}
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+    
+<div class="container mb-5">
+
+    <div class="col-12 mx-auto">
+
+        <div class="col-10 mx-auto m-5 p-5 ">
+            <div class="col-11 mx-auto mb-5 c">
+                <h3>Instructor {{ instructor.4 }} {{ instructor.5 }}</h3>
+                <h3>Subir fotografia a base de datos</h3>
+            </div>
+
+            <div class="col-lg-7 col-sm-11 mx-auto p-5 backs">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="picture" class="form-label">Asegúrese que sea en formato .jpg o .png</label>
+                        <input class="form-control" type="file" name="picture" accept=".jpg,.png" required>
+                    </div>
+
+                    <div class="d-grid gap-2 col-8 mx-auto mt-5 mb-4">
+                        <button class="btn btn-color2" type="submit">Evaluar</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        <hr>
+    </div>
+
+</div>
+
+{% endblock %}
+

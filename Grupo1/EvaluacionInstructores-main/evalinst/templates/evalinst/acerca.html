@@ -1,0 +1,23 @@
+{% extends 'evalinst/layout.html' %}
+{% load static %}
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+    <div class="mx-auto">
+        <form action="/">
+            <h4 style="text-shadow: 2px 2px 5px #000000;">CENTRO DE PRODUCCION DE SOLUCIONES INTELIGENTES -CPSI-</h4>
+            <div class="w3-card-4">
+                <img src="/static/img/img/cpsi.png"  style="height:250px;width:auto" class="w3-padding-large"/>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function Voy(){
+            location.href="/"
+        }
+        setTimeout('Voy()',5000)
+    </script>
+
+{% endblock content %}

@@ -1,0 +1,164 @@
+{% extends 'evalinst/layout.html' %}
+{% load static %}
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+<body>
+    <div class="container">
+        <h1>Evaluación de Instructores SENA</h1>
+        <div class="content">
+            <div class="informacion-aprendiz">
+                <h2>Información del aprendiz</h2>
+                <p>Ficha: 2503481</p>
+                <p>David Alejandro Vivas Rodriguez</p>
+                <p>CC: 1014856367</p>
+                <p>Cel: 3214978224</p>
+                <p>davidvivas@gmail.com</p>
+                <p>COLOMBIA</p>
+            </div>
+            <div class="instructor-info">
+                <h2>Instructor a evaluar</h2>
+                <p>Fabiàn Eduardo</p>
+            </div>
+        </div>
+    <div class="questions-container">
+        <div class="questions">
+            <h2>Cuestionario de evaluación de instructores</h2>
+            <p>Tenga en cuenta que 0 es muy ineficiente y 5 muy eficiente</p>
+            <ul>
+                
+                <li type="none">1.El instructor acompaña y orienta la solución de sus dificultades acadèmicas y personales.</li>
+                <br>
+                <li type="none">2.El instructor aplica estrategias participativas de trabajo en equipo que permiten estar activo permanentemente en su proceso de aprendizaje.</li>
+                <br>
+                <li type="none">3.El instructor demuestra dominio tècnico</li>
+                <br>
+                <li type="none">4.El instructor demuestra dominio tècnico</li>
+                <br>
+                <li type="none">5.El instructor es puntual al iniciar las sesiones</li>
+                <br>
+                <li>6. ____</li>
+                <br>
+                <li>7. ____</li>
+                <br>
+                <li type="none">8.El instructor te informa sobre el proyecto formativo, planificación educativa y objetivos de aprendizaje.</li>
+                <br>
+                <li type="none">9.El instructor orienta tu formación a través de un proyecto formativo.</li>
+                <br>
+                <li type="none">10.El instructor propone fuentes de consulta (Bibliografía, webgrafía...) y asistencia que facilitan tu proceso de aprendizaje.</li>
+                <br>
+                <li type="none">11.El instructor revisa y aconseja sobre planes de mejora.</li>
+                <br>
+                <li type="none">12.El instructor se preocupa por la mejora continua a nivel personal, social y laboral.</li>
+            </ul>
+        </div>
+        <div id="evaluacion">
+            <div class="rating-scale ">
+                <label>1. Muy ineficiente</label>
+                <label>2</label>
+                <label>3</label>
+                <label>4</label>
+                <label>5. Muy eficiente</label>
+            </div>
+            
+            <div class="rating-scale ">
+                <input type="radio" name="opcion1">
+                <input type="radio" name="opcion1">
+                <input type="radio" name="opcion1">
+                <input type="radio" name="opcion1">
+                <input type="radio" name="opcion1">
+            </div>
+            <br>
+            <div class="rating-scale ">
+                <input type="radio" name="opcion2">
+                <input type="radio" name="opcion2">
+                <input type="radio" name="opcion2">
+                <input type="radio" name="opcion2">
+                <input type="radio" name="opcion2">
+            </div>
+            <br>
+            <div class="rating-scale ">
+                <input type="radio" name="opcion3">
+                <input type="radio" name="opcion3">
+                <input type="radio" name="opcion3">
+                <input type="radio" name="opcion3">
+                <input type="radio" name="opcion3">
+            </div>
+            <br>
+            <div class="rating-scale ">
+                <input type="radio" name="opcion4">
+                <input type="radio" name="opcion4">
+                <input type="radio" name="opcion4">
+                <input type="radio" name="opcion4">
+                <input type="radio" name="opcion4">
+            </div>
+            <br>
+            <div class="rating-scale ">
+                <input type="radio" name="opcion5">
+                <input type="radio" name="opcion5">
+                <input type="radio" name="opcion5">
+                <input type="radio" name="opcion5">
+                <input type="radio" name="opcion5">
+            </div>
+            <br>
+            <div class="rating-scale ">
+                <input type="radio" name="opcion6">
+                <input type="radio" name="opcion6">
+                <input type="radio" name="opcion6">
+                <input type="radio" name="opcion6">
+                <input type="radio" name="opcion6">
+            </div>
+            <br>
+            <div class="rating-scale ">
+                <input type="radio" name="opcion7">
+                <input type="radio" name="opcion7">
+                <input type="radio" name="opcion7">
+                <input type="radio" name="opcion7">
+                <input type="radio" name="opcion7">
+            </div>
+            <br>
+            <div class="rating-scale ">
+                <input type="radio" name="opcion8">
+                <input type="radio" name="opcion8">
+                <input type="radio" name="opcion8">
+                <input type="radio" name="opcion8">
+                <input type="radio" name="opcion8">
+            </div>
+            <br>
+            <div class="rating-scale ">
+                <input type="radio" name="opcion9">
+                <input type="radio" name="opcion9">
+                <input type="radio" name="opcion9">
+                <input type="radio" name="opcion9">
+                <input type="radio" name="opcion9">
+            </div>
+            <br>
+            <div class="rating-scale ">
+                <input type="radio" name="opcion10">
+                <input type="radio" name="opcion10">
+                <input type="radio" name="opcion10">
+                <input type="radio" name="opcion10">
+                <input type="radio" name="opcion10">
+            </div>
+            <br>
+            <div class="rating-scale ">
+                <input type="radio" name="opcion11">
+                <input type="radio" name="opcion11">
+                <input type="radio" name="opcion11">
+                <input type="radio" name="opcion11">
+                <input type="radio" name="opcion11">
+            </div>
+            <br>
+            <div class="rating-scale ">
+                <input type="radio" name="opcion12">
+                <input type="radio" name="opcion12">
+                <input type="radio" name="opcion12">    
+                <input type="radio" name="opcion12">
+                <input type="radio" name="opcion12">
+            </div>
+        </div>
+        <button type="submit">Enviar evaluación</button>
+    </div>
+
+</body>
+{% endblock content %}

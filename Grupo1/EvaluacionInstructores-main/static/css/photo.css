@@ -1,0 +1,56 @@
+/* Estilos CSS adicionales */
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #f8f9fa;
+    margin-top: 50px; /* Baja el contenido para dejar espacio para el navbar */
+}
+
+.card {
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: #38a800;
+}
+
+#image-upload-container {
+    margin-bottom: 20px;
+}
+
+#selected-image-container {
+    width: 200px; /* Define un tamaño fijo para el contenedor */
+    height: 200px; /* Define un tamaño fijo para el contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que exceda el contenedor */
+}
+
+#selected-image-container img {
+    width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+}
+
+.modal-content {
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #38a800;
+    border-color: #38a800;
+}
+
+.btn-primary:hover {
+    background-color: #2e8500;
+    border-color: #2e8500;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(56, 168, 0, 0.5);
+}

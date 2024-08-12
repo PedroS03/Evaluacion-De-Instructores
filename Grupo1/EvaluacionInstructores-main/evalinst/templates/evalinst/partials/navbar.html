@@ -1,0 +1,32 @@
+<body>
+    <header class="header-nav">
+        <div class="contenedornav">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img class="senalogo" src="/static/img/icons/LogoSENAblanco.png" alt=""></a>
+            </div> 
+            <div class="columnanav">
+                {% if user.is_authenticated %}    
+                <p>{{user.username | upper}}, bienvenido a la evaluación de instructores.</p> 
+                {% else %}
+                <p>Evaluación de instructores</p>  
+                {% endif %} 
+                    
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{% url 'loadings' %}">Subir Listas</a></li>
+                <li><a href="{% url 'administracion' %}">Administrador</a></li>
+                <li><a href="{% url 'upload_photo' %}">Subir fotos</a></li> 
+                <li><a href="{% url 'administrar' %}">Administrar</a></li>               
+                <li><a href="{% url 'eleccion' %}">Elección</a></li>
+                <li><a href="{% url 'preguntas' %}">Preguntas</a></li>
+                <li><a href="{% url 'evaluacion' %}">Evaluacion</a></li>
+                {% if user.is_authenticated %}
+                <li class="nav-item btnbar"><a href="{% url 'userLogout' %}">Cerrar sesión</a></li>
+            {% endif %}
+            </ul>
+        </nav>        
+        <img class="banner2" src="/static/docs/page design/Imagenes pagina evaluacion instructores/Logo Colombia potencia de la vida.png" alt="">
+    </header>
+</body>

@@ -1,0 +1,18 @@
+{% extends 'evalinstructor/layout.html' %}
+{% block title %} {{title}} {% endblock %}
+{% load static %}
+{% block content %}
+    
+<div class="col-12 mx-auto mt-4 mb-3">
+    <div class="col-9 mx-auto c">
+        <h1>Bienvenid@ Instructor(a) {{ NUMERO_DE_DOCUMENTO }}</h1>
+    </div>
+
+    <div class="col-lg-6 col-sm-10 mx-auto p-5 mb-3">
+        <h3>Foto</h3>
+        <img src='{{ uploaded_file_url }}'class="imgban2">
+    </div>
+
+</div>
+
+{% endblock %}
