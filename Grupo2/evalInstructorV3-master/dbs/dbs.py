@@ -116,3 +116,54 @@ def fullMixTable(request):
         createTable(sqlQuery)
     except:
         messages.info(request, f'La Tabla "Informe" ya existe!')
+
+
+def fullTableFichaInstructor(request):
+        # DATABASE Informe
+    sqlQuery = """ CREATE VIEW VRESULTADOSXFICHA AS
+            SELECT DOCINSTRUCTOR,INSTRUCTOR_NAME,r.FICHA,
+            (SELECT ROUND(AVG(P1)*100/5)) P1,
+            (SELECT ROUND(AVG(P2)*100/5)) P2,
+            (SELECT ROUND(AVG(P3)*100/5)) P3,
+            (SELECT ROUND(AVG(P4)*100/5)) P4,
+            (SELECT ROUND(AVG(P5)*100/5)) P5,
+            (SELECT ROUND(AVG(P6)*100/5)) P6,
+            (SELECT ROUND(AVG(P7)*100/5)) P7,
+            (SELECT ROUND(AVG(P8)*100/5)) P8,
+            (SELECT ROUND(AVG(P9)*100/5)) P9,
+            (SELECT ROUND(AVG(P10)*100/5)) P10,
+            (SELECT ROUND(AVG(P11)*100/5)) P11,
+            (SELECT ROUND(AVG(P12)*100/5)) P12
+            FROM Informe r
+            JOIN INSTRUCTORES I
+            on I.NUMERO_DE_DOCUMENTO=r.DOCINSTRUCTOR 
+            GROUP BY r.DOCINSTRUCTOR, r.INSTRUCTOR_NAME, r.FICHA
+            """
+    try:
+        createTable(sqlQuery)
+    except:
+        messages.info(request, f'La Tabla "ReportePorFicha" ya existe!')
+
+def fullTableDocInstructor(request):
+        # DATABASE Informe
+    sqlQuery = """ CREATE VIEW VRESULTADOTOTAL AS
+            SELECT DISTINCT DOCINSTRUCTOR,INSTRUCTOR_NAME,
+            (SELECT ROUND(AVG(P1)*100/5)) P1,
+            (SELECT ROUND(AVG(P2)*100/5)) P2,
+            (SELECT ROUND(AVG(P3)*100/5)) P3,
+            (SELECT ROUND(AVG(P4)*100/5)) P4,
+            (SELECT ROUND(AVG(P5)*100/5)) P5,
+            (SELECT ROUND(AVG(P6)*100/5)) P6,
+            (SELECT ROUND(AVG(P7)*100/5)) P7,
+            (SELECT ROUND(AVG(P8)*100/5)) P8,
+            (SELECT ROUND(AVG(P9)*100/5)) P9,
+            (SELECT ROUND(AVG(P10)*100/5)) P10,
+            (SELECT ROUND(AVG(P11)*100/5)) P11,
+            (SELECT ROUND(AVG(P12)*100/5)) P12
+            FROM Informe
+            GROUP BY DOCINSTRUCTOR, INSTRUCTOR_NAME
+            """
+    try:
+        createTable(sqlQuery)
+    except:
+        messages.info(request, f'La Tabla "ReportePorDocumento" ya existe!')
