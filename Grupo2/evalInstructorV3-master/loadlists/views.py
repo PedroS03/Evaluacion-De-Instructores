@@ -233,3 +233,47 @@ def uploadPhoto(request):
 
     context = {'title': "Load Foto"}
     return render(request, 'loadlists/uploadPhoto.html', context)
+
+def createFinalPorCoordinacion(request, data):
+    dataeval = "SELECT ENDEVALUACION FROM EvalFechas"
+    endDate = call_db(dataeval)
+    print(str(endDate))
+    endDate = datetime.date(endDate[0])
+    
+    if endDate > timing:
+        inform2 = []
+        fullTableCordInstructor(request)
+        sqlquery = "SELECT * FROM VRESULTADOSXCOORDINACION WHERE COORDINACION = ?"
+        informe2 = call_db_all(sqlquery, data)
+        print(informe2)
+        for info2 in informe2:
+            info2 = list(info2)
+            diction2 = {"DOCAPRENDIZ":info2[0], "DOCINSTRUCTOR":info2[1],"COORDINACION":info2[2],
+                        "P1":info2[3], "P2":info2[4], "P3":info2[5], "P4":info2[6], "P5":info2[7], "P6":info2[8], "P7":info2[9], "P8":info2[10], "P9":info2[11], "P10":info2[12], "P11":info2[13], "P12":info2[14]}
+            inform2.append(diction2)
+
+            # create directorio si no existe
+        dfdocumento = pd.DataFrame(inform2)
+        
+        endDir = createReportFolder()
+            # save to xlsx
+        dfdocumento.to_excel(endDir + "reporte_Final_" + str(timing) + ".xlsx", index=False)
+
+        filename2 = "reporte_Final_" + str(timing) + ".xlsx"
+        file_path = os.path.join(endDir, filename2)
+
+            # Verifica si el archivo existe
+        if not os.path.exists(file_path):
+            messages.error(request, 'El archivo no se encontró.')
+            return redirect('administracion')
+
+            # Crea la respuesta para descargar el archivo
+        with open(file_path, 'rb') as f:
+            response = HttpResponse(f.read(), content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+            response['Content-Disposition'] = f'attachment; filename="{filename2}"'
+            response['Content-Length'] = os.path.getsize(file_path)
+
+        messages.info(request, 'Archivo descargado exitosamente.')
+        return response
+    else:
+        messages.info(request, 'Aun se encuentra la evaluacion en proceso!')
