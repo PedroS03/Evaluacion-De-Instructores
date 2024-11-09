@@ -2,6 +2,7 @@ import os
 import hashlib
 import pandas as pd
 import sqlite3 as sql3
+from django.http import HttpResponse
 from datetime import datetime, date, timedelta
 from django.conf import settings
 from django.contrib import messages
